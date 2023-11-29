@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="list-wrapper">
+        <div id="li-importante">
+            <input type="checkbox" id="ls-importante">
+            <label for="ls-importante">Importante</label>   <br>     </div>
+<button>
+    Salvar
+</button>
+<div id="List-wrapper">
+<div class="item" v-for="item in lista">
+            <p class="texto-item" v-text="intem in lista"></p>
+        </div>
+        </div>
+
+    </div>
+    
+
+
+    <script src="https://unpkg.com/vue@3.0.0-rc.5/dist/vue.global.js"></script>
+    <script>
+Vue.createApp({
+    data(){
+        return{
+            lista: [ {
+                texto: "Item importante",
+                importante: true,
+                feito: false,
+            },
+            {
+                texto: "Item importante",
+                importante: true,
+                feito: false,
+            },
+            {
+                texto: "Item importante",
+                importante: true,
+                feito: false,
+            }
+        ]
+
+            }
+
+        },
+    }
+
+
+).mount("#app")
+
+    </script>
+</body>
+</html>
